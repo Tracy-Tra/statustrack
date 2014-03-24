@@ -1,0 +1,308 @@
+/* "statusTrack" application - WDIM355 SP13 Final Project */
+/* CSS3 stylesheet by Tracy N. Trathen */
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  background-color: #c7cdd1;
+  background-image: url('../img/bg-top.png');
+  background-repeat: repeat-x;
+  background-position: top left;
+  color: #363636;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 1280px;
+}
+header {
+  height:200px;
+}
+/* logo */
+  header img {
+    margin-top: 62px;
+    margin-left: 60px;
+  }
+  .status_key {
+    background-color: #c7cdd1; /* #d8dee2; */
+    border: 1px solid #999c9e;
+    border-radius: 5px;
+    color: #363636;
+    float: right;
+    font-size: 13px;
+    height: 70px;
+    line-height: 16px;
+    margin-top: 80px;
+    margin-right: 40px;
+    padding: 8px 12px 0 12px;
+    width: 630px;
+  }
+  .status_key strong {
+    text-transform: uppercase;
+  }
+  .key_abbr {
+    color: #004080;
+    font-weight: bold;
+  }
+section {
+  height: 54px;
+  margin: 0px auto;
+  width: 1200px;
+}
+
+/* key for project priority */
+ul.priority_key {
+  float: right;
+  background-color: #c7cdd1; /* #d8dee2; */
+  border: 1px solid #999c9e;
+/*  border-bottom: 3px solid #777a7c; */
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  font-size: 13px;
+  font-weight: bold;
+  list-style-type: none;
+  margin: -2px 40px 0 0;
+  padding: 8px 12px;
+}
+  .priority_key li {
+    border-radius: 5px;
+    float: left;
+    margin-left: 10px;
+    padding: 2px 6px;
+  }
+  .priority_key li.title {
+    margin-left: 0;
+    text-transform: uppercase;
+  }
+
+/* priority colors */
+  .three-alarm {
+    background-color: #f7941d;
+  }
+  .high {
+    background-color: #a864a8;
+  }
+  .normal {
+    background-color: #2e92dc;
+  }
+  .low {
+    background-color: #39b54a;
+  }
+  .backburner {
+    background-color: #8dc63f;
+  }
+
+ul.buttons {
+  display:none;
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+  list-style-type: none;
+  margin: 10px auto;
+  padding: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+  .buttons li {
+    background-color: #1b6fb5;
+    border: 1px solid #0a99d6;
+    color: #dae2e5;
+    float: left;
+    margin: 0 4px;
+    padding: 4px 10px;
+    text-align: center;
+    text-shadow: 1px 1px 3px #4d4d4d;
+  }
+  .buttons li:first-child {
+    margin-left: 0;
+  }
+section.form {
+  background-color: #e1e1e1;
+  border-top: 1px solid #636363;
+  border-bottom: 1px solid #636363;
+  display: none;
+  display: block;
+  height: 145px;
+  margin-top: 10px;
+}
+  .column {
+    float: left;
+    padding: 0 15px 0 0;
+  }
+  .column:first-child {
+    padding-left: 10px;
+  }
+  .column.nopadding {
+    margin: 90px 0 0 0;
+    padding: 0;
+    float: right;
+  }
+    form {
+      padding: 10px;
+    }
+      label {
+        float: left;
+        font-size: 14px;
+        font-weight: bold;
+        padding-top: 4px;
+        width: 200px;
+      }
+        label.labels50 {
+          width: 50px;
+        }
+        label.labels80 {
+          width: 80px;
+        }
+        label.labels110 {
+          width: 110px;
+        }
+        label.labels120 {
+          width: 120px;
+        }
+        .datedescr {
+          color: #555;
+          font-size: 13px;
+          margin: 0;
+          padding: 0;
+        }
+      input[type=text] {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #777;
+        line-height: 18px;
+        margin-bottom: 5px;
+        padding: 2px 5px;
+        width: 275px;
+      }
+        input[type=text].text50 {
+          width: 50px;
+        }
+        input[type=text].text90 {
+          width: 90px;
+        }
+      textarea {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #777;
+        line-height: 18px;
+        margin-bottom: 5px;
+        overflow: auto;
+        padding: 2px 5px;
+      }
+        .ta275 {
+          width: 275px;
+          height: 45px;
+        }
+        .ta300 {
+          width: 300px;
+          height: 96px;
+        }
+    select {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        line-height: 18px;
+        margin-bottom: 5px;
+        padding: 2px 5px;
+        width: 160px;
+      }
+   .button, .delete {
+      border: none;
+      border-radius: 5px;
+      background-color: #288033;
+      color: #dae2e5;
+      float: right;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 4px 0;
+      padding: 4px 5px;
+      text-align: center;
+      text-shadow: 1px 1px 3px #4d4d4d;
+      text-transform: uppercase;
+      width: 84px;
+    }
+      .button:hover {
+        background-color: #34a842;
+      }
+    .delete {
+      background-color: #555;
+      margin: 0 8px 0 0;
+      width: 70px;
+    }
+      .delete:hover {
+        background-color: #900;
+      }
+section.grid {
+  height: 100%; /* temporary size */
+  margin-bottom: 20px;
+}
+table {
+  border: none;
+  border-collapse: collapse;
+  margin-top: 10px;
+  width: 1200px;
+}
+  th {
+    border-bottom: 1px solid #636363;
+    color: #464646;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 0 4px 4px;
+    text-align: left;
+    text-transform: uppercase;
+    vertical-align: bottom;
+  }
+  tr {
+    border-bottom: 1px solid #636363;
+  }
+  td {
+    color: #252525;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 16px;
+    padding: 4px;
+    vertical-align: top;
+  }
+    .category {
+      padding-left: 8px;
+      width: 100px;
+    }
+    .project {
+      width: 180px;
+    }
+    .overview {
+      width: 200px;
+    }
+    .kind {
+      text-align: center;
+      width: 50px;
+    }
+    .distcode {
+      text-align: center;
+      width: 70px;
+    }
+    .state {
+      text-align: center;
+      width: 70px;
+    }
+    .daterec {
+      text-align: center;
+      width: 70px;
+    }
+    .datedue {
+      text-align: center;
+      width: 70px;
+    }
+    .notes {
+      width: 300px;
+    }
+    .actions {
+      padding-right: 8px;
+      text-align: center;
+    }
+    

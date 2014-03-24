@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>statusTrack application | WDIM355 SP13 Final Project - Tracy N. Trathen</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="styles/status-trk-styles.css" />
+    <link rel="stylesheet" type="text/css" href="date-picker-theme/jquery-ui-1.10.3.custom.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="js/status.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" />
+      <p class="status_key"><strong>Status Key:</strong><br />
+      <span class="key_abbr">WIP</span> = Work in Progress | <span class="key_abbr">WSE</span> = Waiting on Someone Else/Agent/Agency | <span class="key_abbr">H</span> = on Hold (short-term)<br />
+      <span class="key_abbr">D</span> = Deferred (long-term) | <span class="key_abbr">C</span> = Completed | <span class="key_abbr">NS</span> = Not Started Yet</p>
+      <ul class="priority_key">
+        <li class="title">Priority Key:</li>
+        <li class="three-alarm">Three-alarm</li>
+        <li class="high">High</li>
+        <li class="normal">Normal</li>
+        <li class="low">Low</li>
+        <li class="backburner">Backburner</li>
+      </ul>
+    </header>
+    <section class="form">
+      <form id="tasks" name="tasks">
+        <div class="column">
+          <label class="labels80">Priority: </label>
+          <select name="priority">
+            <option value="Choose a Priority" selected>Choose a Priority</option>
+            <option value="three-alarm" class="three-alarm">Three-Alarm</option>
+            <option value="high" class="high">High</option>
+            <option value="normal" class="normal">Normal</option>
+            <option value="low" class="low">Low</option>
+            <option value="backburner" class="backburner">Backburner</option>
+          </select><br />
+          <label class="labels80">Category: </label>
+          <select name="category">
+            <option value="Choose a Category" selected>Choose a Category</option>
+            <option value="Custom">Custom</option>
+            <option value="Enhancement">Enhancement</option>
+            <option value="Regular">Regular</option>
+            <option value="Internal">Internal</option>
+            <option value="other">Other</option>
+          </select><br />
+          <div class="column">
+            <label class="labels50">Type: </label><br />
+            <input name="kind" type="text" placeholder="EG" id="kind" class="text50" /><br />
+          </div>
+          <div class="column">
+            <label class="labels120">Distributor Code: </label><br />
+            <input name="distcode" type="text" id="distcode" placeholder="NX1234" class="text90" /><br />
+          </div>
+        </div>
+        <div class="column">
+          <label>Project or Customer Name: </label><br />
+          <input name="name" type="text" placeholder="customer name or project name here" id="name" /><br />
+          <label>Overview | Description: </label><br />
+          <textarea name="descr" id="descr" placeholder="overview or description here" class="ta275"></textarea><br />
+        </div>
+        <div class="column">
+          <label class="labels110">Status: </label><input name="state" type="text" id="state" placeholder="use key" class="text90" /><br />
+          <label class="labels110">Date Received: </label><input name="daterec" type="text" id="daterec" placeholder="mm/dd/yy" class="text90" /><br />
+          <label class="labels110">Date Due: </label><input name="datedue" type="text" id="datedue" placeholder="mm/dd/yy" class="text90" /><br />
+          <p class="datedescr"><em>Please format date: mm/dd/yy</em></p>
+        </div>
+        <div class="column">
+          <label class="labels110">Project Notes: </label><br />
+          <textarea name="notes" id="notes" placeholder="fill in your notes here" class="ta300"></textarea><br />
+        </div>
+        <div class="column nopadding">
+          <input type="submit" value="Add" class="button" id="add" />
+        </div>
+      </form>
+    </section>
+    <section class="grid">
+      <!-- example table information for styling purposes -->
+      <table id="tasks-table">
+        <thead>
+          <tr id="tasks-head">
+            <th class="category">Category</th>
+            <th class="kind">Type</th>
+            <th class="distcode">Dist Code</th>
+            <th class="project">Project / Customer</th>
+            <th class="overview">Overview | Description</th>
+            <th class="state">Status</th>
+            <th class="daterec">Date Rec'd</th>
+            <th class="datedue">Date Due</th>
+            <th class="notes">Project Notes</th>
+            <th class="actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tasks-body">
+        </tbody>
+      </table>
+    </section>
+    
+  </body>
+</html>
